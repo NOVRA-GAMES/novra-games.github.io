@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Drop &amp; Pop 3D – NOVRA Games</title>
-<meta name="description" content="Drop & Pop 3D: drop cute toys into the jar, merge two of a kind into a bigger one and reach the giant toy! 100 levels, 25 worlds, 58 toys, events and a monthly leaderboard. By NOVRA.">
+<meta name="description" content="Drop & Pop 3D: drop cute toys into the jar, merge two of a kind into a bigger one and reach the giant toy! 100 levels, 25 worlds, 58 living toys, boss levels, events and a monthly leaderboard. By NOVRA.">
 <meta property="og:title" content="Drop & Pop 3D">
 <meta property="og:description" content="Drop. Merge. Pop! The cutest toy-merging puzzle game.">
 <meta property="og:image" content="img/icon.png">
@@ -200,6 +200,31 @@
   .prizes img { width:34px; height:34px; object-fit:contain; }
   @media (max-width:720px) { .prizes { justify-content:center; } }
 
+  /* boss: Grumpy King Bonk */
+  .boss-bg { background:radial-gradient(circle at 25% 35%, rgba(255,95,168,.28) 0, transparent 45%), linear-gradient(135deg,#2B1240,#4A1E7A); }
+  .boss { display:grid; grid-template-columns:.9fr 1.1fr; gap:34px; align-items:center; color:#fff; max-width:1040px; margin:0 auto; }
+  .boss-stage { position:relative; height:400px; display:flex; align-items:flex-end; justify-content:center; }
+  .boss-stage::before { content:""; position:absolute; left:50%; bottom:10px; width:300px; height:300px; transform:translateX(-50%);
+                        background:radial-gradient(circle, rgba(255,216,77,.35) 0, transparent 65%); }
+  .boss-stage::after { content:""; position:absolute; left:50%; bottom:6px; width:220px; height:26px; transform:translateX(-50%); border-radius:50%; background:rgba(0,0,0,.28); }
+  .boss-stage img { position:relative; z-index:2; height:300px; width:auto; filter:drop-shadow(0 14px 18px rgba(0,0,0,.35)); transition:transform .16s; transform-origin:50% 100%; }
+  .boss-stage img.pop { transform:scale(1.07, .93); }
+  .bubble { position:absolute; z-index:3; top:8px; left:50%; transform:translateX(-50%); background:#fff; color:var(--plum); border:4px solid var(--plum);
+            border-radius:22px; padding:8px 18px; font:700 21px "Fredoka"; box-shadow:0 5px 0 var(--plum); white-space:nowrap; }
+  .bubble::after { content:""; position:absolute; left:50%; bottom:-14px; margin-left:-10px; border:10px solid transparent; border-top:12px solid var(--plum); border-bottom:0; }
+  .boss-tag { display:inline-block; background:var(--pink); color:#fff; font:700 14px "Fredoka"; padding:5px 14px; border-radius:999px; border:3px solid #1a0a26; }
+  .boss h2 { color:#FFD84D; font-size:clamp(32px, 5vw, 46px); margin:10px 0 8px; text-shadow:0 4px 0 #1a0a26; }
+  .boss p { font-size:17.5px; margin:8px 0; color:#F1E8FF; }
+  .moods { display:flex; flex-wrap:wrap; gap:10px; margin:16px 0 22px; }
+  .moods button { display:flex; align-items:center; gap:8px; background:rgba(255,255,255,.12); border:2px solid rgba(255,255,255,.35); color:#fff;
+                  border-radius:16px; padding:5px 12px 5px 5px; font:700 15px "Fredoka"; cursor:pointer; transition:transform .15s, background .15s; }
+  .moods button:hover, .moods button.on { background:rgba(255,216,77,.25); border-color:#FFD84D; transform:translateY(-2px); }
+  .moods img { width:40px; height:40px; object-fit:contain; }
+  @media (max-width:720px) {
+    .boss { grid-template-columns:1fr; text-align:center; } .moods { justify-content:center; }
+    .boss-stage { height:330px; } .boss-stage img { height:240px; } .bubble { font-size:18px; }
+  }
+
   /* tips + faq */
   .tips li { margin:10px 0; font-size:17px; }
   details { background:#fff; border:3px solid var(--plum); border-radius:20px; padding:14px 18px; margin:12px 0; box-shadow:0 5px 0 var(--plum); }
@@ -228,7 +253,7 @@
   <div class="nav-in">
     <a class="brand" href="#top"><img src="img/icon.png" alt="">NOVRA</a>
     <div class="links">
-      <a href="#new">What's new</a><a href="#how">How to play</a><a href="#toys">Toys</a><a href="#powerups">Power-ups</a>
+      <a href="#new">What's new</a><a href="#boss">Boss</a><a href="#how">How to play</a><a href="#toys">Toys</a><a href="#powerups">Power-ups</a>
       <a href="#features">Features</a><a href="#events">Events</a><a href="#contact" class="open-contact">Contact</a><a href="#faq">FAQ</a>
     </div>
   </div>
@@ -249,7 +274,7 @@
     <a class="btn" href="#" id="playBtn"><span>▶</span><span>Coming soon<small>on Google Play</small></span></a>
     <div class="chips">
       <span class="chip">100 levels</span><span class="chip">25 worlds</span><span class="chip">58 living toys</span>
-      <span class="chip">Free to play</span>
+      <span class="chip">10 boss fights</span><span class="chip">Free to play</span>
     </div>
   </div>
   <div class="phone" aria-hidden="true"><img class="fallback" src="img/logo.png" alt=""></div>
@@ -266,8 +291,17 @@
 
 <section id="new">
   <div class="wrap">
-    <div class="title reveal"><h2>What's new</h2><p>Our biggest update yet. The toys have come to life!</p></div>
-    <div class="grid g4">
+    <div class="title reveal"><h2>What's new</h2><p>Update 2.2.3: a grumpy boss has moved into your jar!</p></div>
+    <div class="grid g3">
+      <div class="card new-card reveal"><span class="new-tag">NEW</span>
+        <div class="pic"><img src="img/boss_angry_1.png" alt="Grumpy King Bonk"><span class="say">Grrr!</span></div>
+        <h3>Boss Bonk</h3><p>Every boss level now has Grumpy King Bonk on the jar. He throws stones and laughs, until you beat him and he runs away crying!</p></div>
+      <div class="card new-card reveal"><span class="new-tag">NEW</span>
+        <div class="pic"><img src="img/coin.png" alt=""></div>
+        <h3>Drops bonus</h3><p>Win a drops level with drops to spare and every unused drop pays you coins and XP.</p></div>
+      <div class="card new-card reveal"><span class="new-tag">NEW</span>
+        <div class="pic"><img src="img/gift.png" alt=""></div>
+        <h3>A helping hand</h3><p>Stuck on a level? After a few tries more small toys fall. And the continue timer now waits while you turn your internet on.</p></div>
       <div class="card new-card reveal"><span class="new-tag">NEW</span>
         <div class="pic"><div class="alive"><img src="img/alive_open.png" alt="A toy that blinks and smiles"><img class="b" src="img/alive_blink.png" alt=""><img class="h" src="img/alive_happy.png" alt=""></div></div>
         <h3>Living toys</h3><p>All 58 toys blink, smile when they merge and giggle when you tap them.</p></div>
@@ -277,9 +311,29 @@
       <div class="card new-card reveal"><span class="new-tag">NEW</span>
         <div class="pic"><img src="img/toy_09_512.png" alt=""><span class="say">Hi friend!</span></div>
         <h3>New friends</h3><p>Every big new toy you make jumps in to say hi. Tap it and it talks back!</p></div>
-      <div class="card new-card reveal"><span class="new-tag">NEW</span>
-        <div class="pic"><img src="img/Cup_Gold.png" alt=""></div>
-        <h3>Save with Google</h3><p>Google Play Games keeps your progress safe and unlocks achievements. Updates install right inside the game.</p></div>
+    </div>
+    <p class="hint" style="margin-top:22px">Also: your progress is saved with Google Play Games, and new updates install right inside the game.</p>
+  </div>
+</section>
+
+<section id="boss" class="boss-bg">
+  <div class="boss reveal">
+    <div class="boss-stage">
+      <div class="bubble" id="bossSay">I'm the boss here!</div>
+      <img id="bossImg" src="img/boss_angry_1.png" alt="Grumpy King Bonk, the boss of Drop &amp; Pop 3D">
+    </div>
+    <div>
+      <span class="boss-tag">NEW BOSS</span>
+      <h2>Meet Grumpy King Bonk</h2>
+      <p>Every 10th level is a boss level, and now the boss lives right on your jar. Bonk throws stones into the box, laughs when it starts to fill up and stomps with rage when you make a big merge.</p>
+      <p>Reach the score to beat him and watch him cry and run away… until the next boss level!</p>
+      <div class="moods" id="bossMoods">
+        <button type="button" data-mood="throw"><img src="img/boss_throw_1.png" alt="">Throws stones</button>
+        <button type="button" data-mood="laugh"><img src="img/boss_laugh_2.png" alt="">Laughs at you</button>
+        <button type="button" data-mood="angry"><img src="img/boss_angry_2.png" alt="">Gets angry</button>
+        <button type="button" data-mood="cry"><img src="img/boss_cry_1.png" alt="">Cries &amp; runs</button>
+      </div>
+      <a class="btn alt beta-join" href="#beta"><span>★</span><span>Face the boss in the beta</span></a>
     </div>
   </div>
 </section>
@@ -415,6 +469,7 @@
         <li>⚡ Merge fast: chained merges give a <b>combo</b> bonus.</li>
         <li>✨ Every brand-new toy you create gives extra points.</li>
         <li>💣 Stuck near the dotted line? Use a Bomb or Fire before it is too late.</li>
+        <li>👑 Boss level? Bonk throws a stone every 6 drops: merge toys next to it to crack it, or hit it with the Hammer.</li>
         <li>🔥 Play every day to keep your streak and grab the daily reward.</li>
       </ul>
     </div>
@@ -426,6 +481,7 @@
     <div class="title reveal"><h2>FAQ</h2></div>
     <details><summary>How can I play before the launch?</summary><p>Join our free beta! Tap "Join the beta", send us your Gmail address on WhatsApp and we add you to the test. Then open the Google Play test link we send you, tap "Become a tester" and install the game.</p></details>
     <details><summary>Is Drop &amp; Pop 3D free?</summary><p>Yes! The game is free to play. It shows ads, and you can watch optional videos for extra rewards. "No Ads" can be bought in the game to remove forced ads.</p></details>
+    <details><summary>What are boss levels?</summary><p>Every 10th level is a boss level. Grumpy King Bonk sits on the jar and throws a stone into the box every 6 drops. Stones crack when you merge toys next to them, and the Hammer helps break them. Reach the score to beat him!</p></details>
     <details><summary>When do I lose a level?</summary><p>If toys stay above the dotted line for too long, the level ends. You can watch a short video to revive and keep going.</p></details>
     <details><summary>How does the leaderboard work?</summary><p>Every month is a new season. Your score from levels counts for that month. At the end of the month you get a rank badge and gems: Top 10,000 = Gold Popper, Top 1,000 = Diamond, Top 100 = Master, Top 10 = Grand Master and #1 = Pop Legend.</p></details>
     <details><summary>How can I delete my data?</summary><p>Open Settings in the game and tap "Delete my account &amp; data", or email us. See our <a href="privacy-policy.html">Privacy Policy</a>.</p></details>
@@ -551,6 +607,39 @@
       if (shots.length > 1) setInterval(function () { shots[cur].classList.remove('on'); cur = (cur + 1) % shots.length; shots[cur].classList.add('on'); }, 2800);
     }
     tryShot(1);
+  })();
+  // Boss Bonk: plays his moods one after another (img/boss_*.png); the mood buttons jump to one
+  (function () {
+    var img = document.getElementById('bossImg'), say = document.getElementById('bossSay');
+    if (!img) return;
+    var moods = {
+      idle:  [['master', "You can't beat me!", 1800]],
+      throw: [['throw_1', 'Take this!', 700], ['throw_2', 'Catch!', 1100]],
+      laugh: [['laugh_2', 'Ha ha! Almost full!', 1900]],
+      angry: [['hit', 'Ouch!', 800], ['angry_1', 'Grrr!', 700], ['angry_2', 'Stop that!', 1000]],
+      cry:   [['cry_1', 'Waaah!', 1100], ['cry_2', 'Waaah!', 900], ['runaway', "I'll be back!", 1400]]
+    };
+    var order = ['idle', 'throw', 'laugh', 'angry', 'cry'];
+    Object.keys(moods).forEach(function (k) { moods[k].forEach(function (f) { new Image().src = 'img/boss_' + f[0] + '.png'; }); });
+    var mood = 0, frame = 0, timer = null, buttons = document.querySelectorAll('#bossMoods button');
+    function show(f) {
+      img.src = 'img/boss_' + f[0] + '.png';
+      img.style.transform = f[0] === 'runaway' ? 'scaleX(-1)' : '';   // the run-away art faces left: he runs off to the right
+      say.textContent = f[1];
+      img.classList.add('pop'); setTimeout(function () { img.classList.remove('pop'); }, 160);
+      buttons.forEach(function (b) { b.classList.toggle('on', b.getAttribute('data-mood') === order[mood]); });
+    }
+    function step() {
+      var list = moods[order[mood]];
+      if (frame >= list.length) { mood = (mood + 1) % order.length; frame = 0; list = moods[order[mood]]; }
+      var f = list[frame++];
+      show(f);
+      timer = setTimeout(step, f[2]);
+    }
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { clearTimeout(timer); mood = order.indexOf(b.getAttribute('data-mood')); frame = 0; step(); });
+    });
+    step();
   })();
   // "coming soon" button: no link yet
   document.getElementById('playBtn').addEventListener('click', function (e) {
