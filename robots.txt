@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://novra-games.github.io/sitemap.xml

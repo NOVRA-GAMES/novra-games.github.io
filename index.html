@@ -3,11 +3,81 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Drop &amp; Pop 3D – NOVRA Games</title>
-<meta name="description" content="Drop & Pop 3D: drop cute toys into the jar, merge two of a kind into a bigger one and reach the giant toy! 100 levels, 25 worlds, 58 living toys, boss levels, events and a monthly leaderboard. By NOVRA.">
-<meta property="og:title" content="Drop & Pop 3D">
-<meta property="og:description" content="Drop. Merge. Pop! The cutest toy-merging puzzle game.">
-<meta property="og:image" content="img/icon.png">
+<title>Drop &amp; Pop 3D – Cute 3D Toy Merge Puzzle Game, Free on Android</title>
+<meta name="description" content="Drop cute 3D toys into the jar, merge two of a kind and pop your way to the giant toy. 100+ levels, 58 living toys, boss levels, a Daily Challenge and events. Free on Google Play.">
+<meta name="keywords" content="Drop and Pop 3D, merge game, toy merge puzzle, drop and merge game, 2048 merge, cute puzzle game, free android game, NOVRA Games">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="NOVRA Games">
+<meta name="theme-color" content="#3B1F63">
+<link rel="canonical" href="https://novra-games.github.io/">
+<meta name="google-play-app" content="app-id=com.novra.droppop3d">
+<!-- social share cards (Facebook, WhatsApp, X, Discord...) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Drop &amp; Pop 3D">
+<meta property="og:url" content="https://novra-games.github.io/">
+<meta property="og:title" content="Drop &amp; Pop 3D – the cutest toy merge game">
+<meta property="og:description" content="Drop cute 3D toys, merge two of a kind and pop your way to the giant toy. Free on Google Play.">
+<meta property="og:image" content="https://novra-games.github.io/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Drop &amp; Pop 3D logo in a candy world">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@NOVRAGames">
+<meta name="twitter:title" content="Drop &amp; Pop 3D – the cutest toy merge game">
+<meta name="twitter:description" content="Drop cute 3D toys, merge two of a kind and pop your way to the giant toy. Free on Google Play.">
+<meta name="twitter:image" content="https://novra-games.github.io/img/og-image.jpg">
+<link rel="apple-touch-icon" href="img/icon.png">
+<!-- structured data: helps Google and AI assistants understand the game -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://novra-games.github.io/#org",
+      "name": "NOVRA Games",
+      "url": "https://novra-games.github.io/",
+      "logo": "https://novra-games.github.io/img/icon.png",
+      "email": "novra.games.company@gmail.com",
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.novra.droppop3d",
+        "https://www.facebook.com/droppop3d",
+        "https://x.com/NOVRAGames",
+        "https://www.tiktok.com/@novra.games",
+        "https://whatsapp.com/channel/0029VbE7xALGJP88PKS5Xa2F"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://novra-games.github.io/#site",
+      "url": "https://novra-games.github.io/",
+      "name": "Drop & Pop 3D",
+      "publisher": { "@id": "https://novra-games.github.io/#org" }
+    },
+    {
+      "@type": ["VideoGame", "MobileApplication"],
+      "@id": "https://novra-games.github.io/#game",
+      "name": "Drop & Pop 3D",
+      "alternateName": "Drop and Pop 3D",
+      "description": "A relaxing drop-and-merge puzzle game. Drop cute 3D toys into a jar, merge two of the same toy into a bigger one and reach the giant toy. 100+ levels across 25 worlds, 58 living toys, boss levels with Grumpy King Bonk, a Daily Challenge, seasonal events, a sticker album and a Toy Room.",
+      "url": "https://novra-games.github.io/",
+      "image": "https://novra-games.github.io/img/og-image.jpg",
+      "genre": ["Puzzle", "Merge", "Casual"],
+      "gamePlatform": "Android",
+      "operatingSystem": "Android 8.0 or newer",
+      "applicationCategory": "GameApplication",
+      "applicationSubCategory": "Puzzle",
+      "playMode": "SinglePlayer",
+      "inLanguage": "en",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.novra.droppop3d",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.novra.droppop3d",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "category": "free" },
+      "author": { "@id": "https://novra-games.github.io/#org" },
+      "publisher": { "@id": "https://novra-games.github.io/#org" }
+    }
+  ]
+}
+</script>
 <link rel="icon" href="img/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -171,6 +241,12 @@
   .mystery b { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font:700 72px "Fredoka"; color:#fff;
                text-shadow:0 4px 0 var(--plum), 0 0 18px rgba(122,72,201,.8); animation:bob 2.6s ease-in-out infinite; }
 
+  h1.h1logo { margin:0; font-size:0; line-height:0; }
+  .share { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:18px; }
+  .share a, .share button { display:inline-flex; align-items:center; gap:8px; border:3px solid #1a0a26; border-radius:999px; padding:9px 16px;
+    font:700 16px "Fredoka", Arial, sans-serif; color:#fff; text-decoration:none; cursor:pointer; box-shadow:0 4px 0 #1a0a26; }
+  .share .s-wa { background:#25D366; } .share .s-fb { background:#1877F2; } .share .s-x { background:#111; } .share .s-cp { background:#7A48C9; }
+  .share-note { font-weight:800; opacity:.9; margin-top:6px; }
   /* beta strip under the hero */
   .beta { background:linear-gradient(90deg,#2B1240,#5A2A0A); color:#fff; padding:16px; text-align:center; }
   .beta-in { max-width:1120px; margin:0 auto; display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; font-weight:800; font-size:17px; }
@@ -266,14 +342,12 @@
   <img class="float f4" src="img/toy_20_1m.png" alt="">
   <div class="hero-wrap">
   <div class="hero-in">
-    <img class="logo" src="img/logo.png" alt="Drop &amp; Pop 3D">
+    <h1 class="h1logo"><img class="logo" src="img/logo.png" alt="Drop &amp; Pop 3D – cute 3D toy merge puzzle game" fetchpriority="high"></h1>
     <p class="tag">Drop cute toys. Merge two of a kind. Pop your way to the giant toy!</p>
-    <!-- beta: testers send their Gmail on WhatsApp and are added to the Play test list -->
-    <a class="btn alt beta-join" href="#beta"><span>★</span><span>Join the free beta<small>Play before everyone</small></span></a>
-    <!-- after release: put the Google Play link in href and change the text to "Get it on Google Play" -->
-    <a class="btn" href="#" id="playBtn"><span>▶</span><span>Coming soon<small>on Google Play</small></span></a>
+    <a class="btn play-link" href="https://play.google.com/store/apps/details?id=com.novra.droppop3d" id="playBtn" target="_blank" rel="noopener"><span>▶</span><span>Get it on Google Play<small>Free to play · Android</small></span></a>
+    <a class="btn alt share-open" href="#share"><span>★</span><span>Share with a friend<small>Who can merge further?</small></span></a>
     <div class="chips">
-      <span class="chip">100 levels</span><span class="chip">25 worlds</span><span class="chip">58 living toys</span>
+      <span class="chip">100+ levels</span><span class="chip">25 worlds</span><span class="chip">58 living toys</span>
       <span class="chip">10 boss fights</span><span class="chip">Free to play</span>
     </div>
   </div>
@@ -283,9 +357,9 @@
 
 <div class="beta" id="beta">
   <div class="beta-in">
-    <img src="img/Halloween_Ghost.png" alt="">
-    <span>The beta is open and the <b>Spooky Pop</b> Halloween event is live inside it: <b class="hw-days">a few days left</b> to win the Halloween Hero trophy!</span>
-    <a class="beta-join" href="#beta">Join the beta</a>
+    <img src="img/icon.png" alt="">
+    <span><b>Out now on Google Play!</b> Drop &amp; Pop 3D is free: 100+ levels, boss fights and a new Daily Challenge every day.</span>
+    <a class="play-link" href="https://play.google.com/store/apps/details?id=com.novra.droppop3d" target="_blank" rel="noopener">Install free</a>
   </div>
 </div>
 
@@ -306,24 +380,24 @@
         <button type="button" data-mood="angry"><img src="img/boss_angry_2.png" alt="">Gets angry</button>
         <button type="button" data-mood="cry"><img src="img/boss_cry_1.png" alt="">Cries &amp; runs</button>
       </div>
-      <a class="btn alt beta-join" href="#beta"><span>★</span><span>Face the boss in the beta</span></a>
+      <a class="btn alt play-link" href="https://play.google.com/store/apps/details?id=com.novra.droppop3d" target="_blank" rel="noopener"><span>▶</span><span>Face the boss now</span></a>
     </div>
   </div>
 </section>
 
 <section id="new">
   <div class="wrap">
-    <div class="title reveal"><h2>What's new</h2><p>Update 2.2.3: a grumpy boss has moved into your jar!</p></div>
+    <div class="title reveal"><h2>What's new</h2><p>Out now: boss levels, a Daily Challenge, your own Toy Room and much more.</p></div>
     <div class="grid g3">
       <div class="card new-card reveal"><span class="new-tag">NEW</span>
         <div class="pic"><img src="img/boss_angry_1.png" alt="Grumpy King Bonk"><span class="say">Grrr!</span></div>
         <h3>Boss Bonk</h3><p>Every boss level now has Grumpy King Bonk on the jar. He throws stones and laughs, until you beat him and he runs away crying!</p></div>
       <div class="card new-card reveal"><span class="new-tag">NEW</span>
-        <div class="pic"><img src="img/coin.png" alt=""></div>
-        <h3>Drops bonus</h3><p>Win a drops level with drops to spare and every unused drop pays you coins and XP.</p></div>
+        <div class="pic"><img src="img/podium.png" alt="Daily Challenge leaderboard"></div>
+        <h3>Daily Challenge</h3><p>One special level a day, the same for everyone. 30 drops, one goal: the best score of the day.</p></div>
       <div class="card new-card reveal"><span class="new-tag">NEW</span>
-        <div class="pic"><img src="img/gift.png" alt=""></div>
-        <h3>A helping hand</h3><p>Stuck on a level? After a few tries more small toys fall. And the continue timer now waits while you turn your internet on.</p></div>
+        <div class="pic"><img src="img/gift.png" alt="Sticker album and Toy Room rewards"></div>
+        <h3>Stickers &amp; Toy Room</h3><p>Win a sticker after every level, fill the album pages and decorate a cosy room for the toy friends you find.</p></div>
       <div class="card new-card reveal"><span class="new-tag">NEW</span>
         <div class="pic"><div class="alive"><img src="img/alive_open.png" alt="A toy that blinks and smiles"><img class="b" src="img/alive_blink.png" alt=""><img class="h" src="img/alive_happy.png" alt=""></div></div>
         <h3>Living toys</h3><p>All 58 toys blink, smile when they merge and giggle when you tap them.</p></div>
@@ -439,7 +513,7 @@
           <span><img src="img/Halloween_Logo.png" alt="">Pumpkin Jar &amp; spooky frame</span>
           <span><img src="img/Trophy_Halloween.png" alt="">Halloween Hero trophy</span>
         </div>
-        <a class="btn alt beta-join" href="#beta" style="margin-top:8px"><span>★</span><span>Play it now in the beta</span></a>
+        <a class="btn alt play-link" href="https://play.google.com/store/apps/details?id=com.novra.droppop3d" target="_blank" rel="noopener" style="margin-top:8px"><span>▶</span><span>Get the game</span></a>
       </div>
     </div>
     <h3 class="soon-title reveal">Coming soon</h3>
@@ -479,9 +553,14 @@
 <section id="faq">
   <div class="wrap" style="max-width:820px">
     <div class="title reveal"><h2>FAQ</h2></div>
-    <details><summary>How can I play before the launch?</summary><p>Join our free beta! Tap "Join the beta", send us your Gmail address on WhatsApp and we add you to the test. Then open the Google Play test link we send you, tap "Become a tester" and install the game.</p></details>
+    <details open><summary>What is Drop &amp; Pop 3D?</summary><p>Drop &amp; Pop 3D is a free, relaxing merge puzzle game for Android by NOVRA Games. You drop cute 3D toys into a jar, merge two of the same toy into a bigger one and keep going until you reach the giant toy. It has 100+ levels in 25 worlds, 58 living toys and a boss level every 10 levels.</p></details>
+    <details><summary>Where can I download Drop &amp; Pop 3D?</summary><p>Drop &amp; Pop 3D is free on <a class="play-link" href="https://play.google.com/store/apps/details?id=com.novra.droppop3d" target="_blank" rel="noopener">Google Play</a>. Search for "Drop &amp; Pop 3D" or tap "Get it on Google Play" on this page.</p></details>
+    <details><summary>Which phones can play it?</summary><p>Any Android phone or tablet with Android 8.0 or newer. There is no iPhone (iOS) version yet.</p></details>
+    <details><summary>Can I play offline?</summary><p>Yes. Levels, toys and power-ups all work without internet. You need a connection only for leaderboards, the Daily Challenge board, cloud save and reward videos.</p></details>
     <details><summary>Is Drop &amp; Pop 3D free?</summary><p>Yes! The game is free to play. It shows ads, and you can watch optional videos for extra rewards. "No Ads" can be bought in the game to remove forced ads.</p></details>
     <details><summary>What are boss levels?</summary><p>Every 10th level is a boss level. Grumpy King Bonk sits on the jar and throws a stone into the box every 6 drops. Stones crack when you merge toys next to them, and the Hammer helps break them. Reach the score to beat him!</p></details>
+    <details><summary>What is the Daily Challenge?</summary><p>Every day there is one special level, the same for every player. You get 30 drops to score as many points as you can, your best score goes on the daily leaderboard and your first finish of the day gives a reward.</p></details>
+    <details><summary>Will my progress be saved if I change phones?</summary><p>Yes. Sign in with Google Play Games and your progress is saved to your Google account, so it comes back on a new phone.</p></details>
     <details><summary>When do I lose a level?</summary><p>If toys stay above the dotted line for too long, the level ends. You can watch a short video to revive and keep going.</p></details>
     <details><summary>How does the leaderboard work?</summary><p>Every month is a new season. Your score from levels counts for that month. At the end of the month you get a rank badge and gems: Top 10,000 = Gold Popper, Top 1,000 = Diamond, Top 100 = Master, Top 10 = Grand Master and #1 = Pop Legend.</p></details>
     <details><summary>How can I delete my data?</summary><p>Open Settings in the game and tap "Delete my account &amp; data", or email us. See our <a href="privacy-policy.html">Privacy Policy</a>.</p></details>
@@ -489,12 +568,19 @@
   </div>
 </section>
 
-<section class="cta">
+<section class="cta" id="share">
   <div class="wrap">
     <h2>Ready to pop?</h2>
-    <p>Drop &amp; Pop 3D is in beta now and coming soon to Google Play.</p>
-    <a class="btn alt beta-join" href="#beta">★ Join the beta</a>
+    <p>Drop &amp; Pop 3D is free on Google Play. Challenge a friend: who can make the biggest toy?</p>
+    <a class="btn alt play-link" href="https://play.google.com/store/apps/details?id=com.novra.droppop3d" target="_blank" rel="noopener">▶ Get it on Google Play</a>
     <a class="btn open-contact" href="#contact"><svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="26" height="18" rx="4" fill="#fff"/><path d="M5 10l11 7 11-7" fill="none" stroke="#2FB867" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Contact us</a>
+    <p class="share-note">Share Drop &amp; Pop 3D with your friends</p>
+    <div class="share">
+      <a class="s-wa" id="shWa" href="#" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="s-fb" id="shFb" href="#" target="_blank" rel="noopener">Facebook</a>
+      <a class="s-x" id="shX" href="#" target="_blank" rel="noopener">X</a>
+      <button class="s-cp" type="button" id="shCopy">Copy link</button>
+    </div>
   </div>
 </section>
 
@@ -503,6 +589,11 @@
     <a href="privacy-policy.html">Privacy Policy</a>
     <a href="#contact" class="open-contact">Contact</a>
     <a href="#faq">FAQ</a>
+    <a class="play-link" href="https://play.google.com/store/apps/details?id=com.novra.droppop3d" target="_blank" rel="noopener">Google Play</a>
+    <a href="https://www.facebook.com/droppop3d" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://x.com/NOVRAGames" target="_blank" rel="noopener">X</a>
+    <a href="https://www.tiktok.com/@novra.games" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://whatsapp.com/channel/0029VbE7xALGJP88PKS5Xa2F" target="_blank" rel="noopener">WhatsApp Channel</a>
   </div>
   <div>© 2026 NOVRA. All rights reserved.</div>
 </footer>
@@ -576,14 +667,32 @@
       if (!live) { d.style.display = 'none'; return; }
       d.textContent = days <= 1 ? 'Last day!' : days + ' days left';
     });
-    if (!live) { var bs = document.querySelector('.beta-in span'); if (bs) bs.innerHTML = 'The <b>Drop &amp; Pop 3D</b> beta is open: play every new update before everyone else!'; }
   })();
-  // "Join the beta": WhatsApp chat with the message ready; the player only adds their Gmail
-  document.querySelectorAll('.beta-join').forEach(function (a) {
-    a.href = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent('Hi NOVRA! I want to join the Drop & Pop 3D beta. My Gmail is: ');
-    a.target = '_blank';
-    a.rel = 'noopener';
+  // Google Play links carry "website" as the install source, so Play Console shows installs that came from here
+  var PLAY = 'https://play.google.com/store/apps/details?id=com.novra.droppop3d';
+  document.querySelectorAll('.play-link').forEach(function (a) {
+    a.href = PLAY + '&referrer=' + encodeURIComponent('utm_source=website&utm_medium=button');
   });
+  // share buttons: native share sheet on phones, else WhatsApp / Facebook / X / copy
+  (function () {
+    var url = 'https://novra-games.github.io/';
+    var text = "I'm playing Drop & Pop 3D, the cutest toy merge game. Can you make a bigger toy than me? Free on Google Play: " + PLAY;
+    document.getElementById('shWa').href = 'https://wa.me/?text=' + encodeURIComponent(text);
+    document.getElementById('shFb').href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url);
+    document.getElementById('shX').href = 'https://x.com/intent/post?text=' + encodeURIComponent(text) + '&hashtags=DropAndPop3D';
+    document.getElementById('shCopy').addEventListener('click', function () {
+      var b = this;
+      function ok() { b.textContent = 'Copied!'; setTimeout(function () { b.textContent = 'Copy link'; }, 1800); }
+      if (navigator.clipboard) navigator.clipboard.writeText(PLAY).then(ok, function () {});
+    });
+    document.querySelectorAll('.share-open').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        if (!navigator.share) return;   // desktop: just scroll to the share buttons
+        e.preventDefault();
+        navigator.share({ title: 'Drop & Pop 3D', text: text, url: PLAY }).catch(function () {});
+      });
+    });
+  })();
   // game screenshots: img/shot1.jpg ... img/shot8.jpg (just upload them, nothing else to change).
   // They play as a slideshow inside the hero phone and fill the "See it in action" strip.
   (function () {
@@ -641,10 +750,6 @@
     });
     step();
   })();
-  // "coming soon" button: no link yet
-  document.getElementById('playBtn').addEventListener('click', function (e) {
-    if (this.getAttribute('href') === '#') { e.preventDefault(); alert('Drop & Pop 3D is coming soon to Google Play!'); }
-  });
 </script>
 </body>
 </html>

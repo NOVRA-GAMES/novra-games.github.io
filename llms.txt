@@ -1,0 +1,22 @@
+# Drop & Pop 3D
+
+> Drop & Pop 3D is a free, relaxing 3D merge puzzle game for Android by NOVRA Games. Players drop cute 3D toys into a jar; two identical toys merge into a bigger toy, and the goal is to reach the giant toy.
+
+## Key facts
+- Developer / publisher: NOVRA Games
+- Platform: Android (Android 8.0 or newer). No iOS version yet.
+- Price: free to play, with optional in-app purchases and ads (a No Ads purchase is available)
+- Genre: puzzle, merge, casual
+- Content: 100+ levels in 25 worlds, 58 living toys, a boss level every 10 levels (Grumpy King Bonk), a Daily Challenge with a daily leaderboard, monthly leaderboard, seasonal events (Halloween, Christmas, New Year, Eid), sticker album, Toy Room, power-ups (Hammer, Bomb, Fire)
+- Works offline; internet only needed for leaderboards, cloud save and reward videos
+- Cloud save through Google Play Games
+
+## Links
+- Google Play: https://play.google.com/store/apps/details?id=com.novra.droppop3d
+- Website: https://novra-games.github.io/
+- Privacy policy: https://novra-games.github.io/privacy-policy.html
+- Facebook: https://www.facebook.com/droppop3d
+- X: https://x.com/NOVRAGames
+- TikTok: https://www.tiktok.com/@novra.games
+- WhatsApp channel: https://whatsapp.com/channel/0029VbE7xALGJP88PKS5Xa2F
+- Contact: novra.games.company@gmail.com
