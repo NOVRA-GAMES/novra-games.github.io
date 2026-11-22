@@ -750,6 +750,12 @@
     });
     step();
   })();
+  // visitor counter (GoatCounter, no cookies): also count clicks on the Play and share buttons
+  document.querySelectorAll('.play-link').forEach(function (a) { a.setAttribute('data-goatcounter-click', 'play-store'); });
+  [['shWa', 'share-whatsapp'], ['shFb', 'share-facebook'], ['shX', 'share-x'], ['shCopy', 'share-copy']].forEach(function (p) {
+    var e = document.getElementById(p[0]); if (e) e.setAttribute('data-goatcounter-click', p[1]);
+  });
 </script>
+<script data-goatcounter="https://novra-games.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
